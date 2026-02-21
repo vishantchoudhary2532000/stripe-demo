@@ -69,9 +69,18 @@ Use the standard Stripe test card to simulate successful transactions:
 
 ```text
 src/
-├── app/          # Pages and API routes (checkout, payment-intent)
-├── components/   # Modular UI components (Header, Footer, CheckoutForm, etc.)
-└── lib/          # Centralized Stripe client and utilities
+├── app/
+│   ├── api/             # Stripe API endpoints
+│   │   ├── checkout/    # Hosted checkout session creation
+│   │   └── payment-intent/ # Embedded payment intent creation
+│   ├── success/         # Post-purchase success page
+│   ├── canceled/        # Payment cancellation page
+│   └── page.tsx         # Main landing page with Product Cards
+├── components/          # Modular UI components
+│   ├── CheckoutForm.tsx # Stripe Elements embedded form
+│   ├── ProductCard.tsx  # Product display for both checkout paths
+│   └── Header/Footer.tsx
+└── lib/                 # Shared logic & Stripe client initialization
 ```
 
 ## License
