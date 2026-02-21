@@ -1,45 +1,70 @@
+'use client';
+
 import Link from 'next/link';
+import { XCircleIcon, ArrowLeftIcon, QuestionMarkCircleIcon, LifebuoyIcon } from '@heroicons/react/24/outline';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
-export default function Canceled() {
+export default function CanceledPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-amber-50 flex items-center justify-center px-6 py-16">
-      <div className="max-w-2xl w-full bg-white rounded-3xl shadow-xl border border-rose-100 p-10 text-center">
-        <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-rose-100">
-          <span className="text-4xl">⚠️</span>
-        </div>
-        <h1 className="text-4xl font-bold text-rose-600 tracking-tight">Payment Canceled</h1>
-        <p className="mt-4 text-lg text-gray-600">
-          It looks like the payment didn&#39;t go through. You can retry whenever you&#39;re ready—your card wasn&#39;t charged.
-        </p>
+    <div className="min-h-screen bg-[#fafafa] flex flex-col font-sans selection:bg-red-100 selection:text-red-700 overflow-x-hidden">
+      <Header />
+      <main className="flex-grow flex items-center justify-center px-4 py-20 relative">
+        {/* Decorative background */}
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-red-100/20 blur-[120px] rounded-full -z-10 animate-pulse" />
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 text-left">
-          <div className="rounded-2xl bg-rose-50 p-5">
-            <h2 className="text-sm font-semibold text-rose-700 uppercase tracking-wide">Possible Causes</h2>
-            <ul className="mt-3 space-y-2 text-sm text-gray-600 list-disc list-inside">
-              <li>User canceled the Stripe checkout window</li>
-              <li>Card declined or requires additional authentication</li>
-              <li>Network hiccup during confirmation</li>
-            </ul>
-          </div>
-          <div className="rounded-2xl bg-amber-50 p-5">
-            <h2 className="text-sm font-semibold text-amber-700 uppercase tracking-wide">What You Can Do</h2>
-            <ul className="mt-3 space-y-2 text-sm text-gray-600 list-disc list-inside">
-              <li>Double-check card details or try another card</li>
-              <li>Ensure test card uses a valid billing ZIP</li>
-              <li>Review Stripe logs in test mode for more info</li>
-            </ul>
-          </div>
-        </div>
+        <div className="max-w-xl w-full translate-y-[-20px] animate-fade-in-up">
+          <div className="premium-card bg-white/90 backdrop-blur-xl p-8 sm:p-12 text-center relative overflow-hidden">
+            {/* Status tag */}
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-red-50 text-red-600 text-[10px] font-bold tracking-widest uppercase border border-red-100 mb-8">
+              Transaction Incomplete
+            </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/"
-            className="inline-flex items-center justify-center rounded-full bg-rose-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-rose-200 transition hover:bg-rose-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rose-600"
-          >
-            Back to Home
-          </Link>
+            <div className="w-20 h-20 bg-red-50 rounded-3xl flex items-center justify-center mx-auto mb-8 border border-red-100 shadow-xl shadow-red-100/50 -rotate-3">
+              <XCircleIcon className="h-10 w-10 text-red-500" />
+            </div>
+
+            <h1 className="text-4xl font-display font-black text-gray-950 mb-4 tracking-tight">
+              Checkout <span className="text-red-600">Canceled</span>
+            </h1>
+            <p className="text-gray-500 font-medium leading-relaxed mb-10 max-w-sm mx-auto text-lg">
+              We noticed you left the checkout. Don&apos;t worry, no charges were made to your account.
+            </p>
+
+            <div className="space-y-4">
+              <Link
+                href="/"
+                className="w-full bg-gray-950 text-white font-bold py-4 px-6 rounded-2xl flex items-center justify-center hover:bg-gray-800 transition-all duration-500 active:scale-95 group shadow-xl shadow-gray-200"
+              >
+                <ArrowLeftIcon className="h-5 w-5 mr-3 group-hover:-translate-x-1 transition-transform" />
+                Try Checkout Again
+              </Link>
+
+              <div className="grid grid-cols-2 gap-4 pt-4">
+                <a href="https://support.stripe.com/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 py-3 px-4 rounded-xl border border-gray-100 bg-gray-50/50 text-gray-600 font-bold text-xs hover:bg-white hover:shadow-sm transition-all cursor-pointer">
+                  <QuestionMarkCircleIcon className="h-4 w-4" />
+                  <span>FAQs</span>
+                </a>
+                <a href="https://support.stripe.com/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-2 py-3 px-4 rounded-xl border border-gray-100 bg-gray-50/50 text-gray-600 font-bold text-xs hover:bg-white hover:shadow-sm transition-all cursor-pointer">
+                  <LifebuoyIcon className="h-4 w-4" />
+                  <span>Contact Support</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 p-6 bg-white/50 border border-gray-100 rounded-2xl flex items-start space-x-4">
+            <div className="bg-indigo-50 p-2 rounded-lg">
+              <LifebuoyIcon className="h-5 w-5 text-indigo-600" />
+            </div>
+            <div className="text-left">
+              <h4 className="text-sm font-bold text-gray-900 mb-1">Need help with your payment?</h4>
+              <p className="text-xs text-gray-500 font-medium">Our team is available 24/7 to assist with any technical issues during checkout.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }

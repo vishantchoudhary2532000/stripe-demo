@@ -79,7 +79,7 @@ export default function CheckoutForm() {
         }
     };
 
-    const inputStyles = "w-full p-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition-all placeholder:text-gray-400 text-gray-700 bg-gray-50/50";
+    const inputStyles = "w-full p-4 border border-gray-100 rounded-xl focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 outline-none transition-all duration-300 placeholder:text-gray-400 text-gray-700 bg-gray-50/30 hover:bg-gray-50/80";
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6">

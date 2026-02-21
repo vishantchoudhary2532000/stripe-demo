@@ -46,25 +46,26 @@ export default function Home() {
     <div className="min-h-screen bg-[#fafafa] flex flex-col font-sans text-gray-900 selection:bg-indigo-100 selection:text-indigo-700">
       <Header />
 
-      <main className="flex-grow pt-16 pb-24 px-4 sm:px-6 lg:px-8">
+      <main className="flex-grow pt-8 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Hero Section */}
-          <div className="text-center mb-20 space-y-6">
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-indigo-50 text-indigo-600 text-sm font-semibold tracking-wide border border-indigo-100 animate-fade-in">
+          <div className="text-center mb-12 space-y-4">
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-indigo-50/50 backdrop-blur-sm text-indigo-600 text-[10px] sm:text-xs font-bold tracking-widest uppercase border border-indigo-100/50 shadow-sm animate-fade-in">
               <SparklesIcon className="h-4 w-4 mr-2" />
-              New: Experience Seamless Payments
+              Unified Payment Ecosystem
             </div>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-gray-900 leading-[1.1]">
-              Elevate Your <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Checkout</span> Experience
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-display font-extrabold tracking-tight text-gray-950 leading-[1.1]">
+              Seamless Payments.<br />
+              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Zero Friction.</span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed px-4">
-              Integrate world-class payment processing in minutes. Choose between our high-conversion hosted page or a fully custom embedded widget.
+            <p className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed font-medium opacity-90">
+              Integrate world-class financial processing in minutes. Deploy high-conversion checkout flows used by the world&apos;s leading platforms.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 pt-4 text-xs sm:text-sm font-medium text-gray-400">
-              <div className="flex items-center"><ShieldCheckIcon className="h-5 w-5 mr-2 text-emerald-500" /> PCI DSS Compliant</div>
-              <div className="flex items-center"><ShieldCheckIcon className="h-5 w-5 mr-2 text-emerald-500" /> 256-bit SSL Secure</div>
-              <div className="flex items-center"><ShieldCheckIcon className="h-5 w-5 mr-2 text-emerald-500" /> Global Support</div>
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 pt-1 text-[10px] sm:text-xs font-bold text-gray-400">
+              <div className="flex items-center group transition-colors hover:text-gray-600"><ShieldCheckIcon className="h-5 w-5 mr-3 text-emerald-500" /> PCI-DSS Level 1</div>
+              <div className="flex items-center group transition-colors hover:text-gray-600"><ShieldCheckIcon className="h-5 w-5 mr-3 text-emerald-500" /> AES-256 Bit Encryption</div>
+              <div className="flex items-center group transition-colors hover:text-gray-600"><ShieldCheckIcon className="h-5 w-5 mr-3 text-emerald-500" /> 24/7 Global Infrastructure</div>
             </div>
           </div>
 
