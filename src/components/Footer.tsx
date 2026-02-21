@@ -12,15 +12,15 @@ export default function Footer() {
                     <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Resources</h4>
                         <ul className="space-y-2 text-gray-600">
-                            <li><a href="https://stripe.com/docs" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Stripe Docs</a></li>
-                            <li><a href="https://nextjs.org/docs" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Next.js Framework</a></li>
+                            <li><a href="https://stripe.com/docs/checkout" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Checkout Docs</a></li>
+                            <li><a href="https://nextjs.org/docs/app/building-your-application/routing" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Next.js Routing</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Support</h4>
                         <ul className="space-y-2 text-gray-600">
-                            <li><a href="https://stripe.com/contact" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Stripe Support</a></li>
-                            <li><a href="https://status.stripe.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">API Status</a></li>
+                            <li><a href="https://support.stripe.com/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Help Center</a></li>
+                            <li><a href="https://status.stripe.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">System Status</a></li>
                         </ul>
                     </div>
                 </div>
